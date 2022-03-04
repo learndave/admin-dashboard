@@ -258,14 +258,6 @@ input#search-bar {
     font-weight: 500;
 }
 
-.announcements {
-    background-color: green;
-}
-
-.trending {
-    background-color: yellow;
-}
-
 .card-container {
     flex: 1;
 
@@ -274,14 +266,89 @@ input#search-bar {
     flex-wrap: wrap;
 }
 
-.project-card {
-    flex: 1 0 45%;
-}
-
 .card {
     background-color: white;
     border-radius: 10px;
 }
+
+.project-card {
+    flex: 1 0 32%;
+
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 5px;
+}
+
+.card-title {
+    font-weight: 700;
+}
+
+.card-content {
+    flex: 1;
+
+    color: #666;
+    font-size: 14px;
+}
+
+.card-actions {
+    align-self: flex-end;
+    
+    display: flex;
+    gap: 20px;
+}
+
+.favorite {
+    -webkit-mask: url("/images/favorite.svg")  no-repeat center;
+    mask:  url("/images/favorite.svg")  no-repeat center;
+}
+
+
+.watch {
+    -webkit-mask: url("/images/watch.svg")  no-repeat center;
+    mask:  url("/images/watch.svg")  no-repeat center;
+}
+
+
+.share {
+    -webkit-mask: url("/images/share.svg")  no-repeat center;
+    mask:  url("/images/share.svg")  no-repeat center;
+}
+
+
+.favorite, 
+.watch,
+.share {
+    width: 20px;
+    height: 20px;
+    background-color: var(--color-contrast);
+    mask-size: contain;
+}
+
+
+
+
+.announcements {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.announcement-card {
+    flex: 1;
+    gap: 15px;
+}
+
+.trending {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.trending-card {
+    flex: 1;
+}
+
 
 
 
